@@ -27,8 +27,6 @@ banking-automation-framework/
 ├── lib/                     # Reusable libraries (optional)
 ├── pages/                   # Page classes (POM)
 ├── reports/                 # Logs, screenshots, and reports
-│   └── allure-results/         # Screenshots by test name
-│   └── log_dir/         # Screenshots by test name
 │   └── screenshots/         # Screenshots by test name
 ├── scripts/                 # Shell scripts (optional)
 ├── tests/                   # Test cases (Pytest)
