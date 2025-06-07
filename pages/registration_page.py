@@ -36,8 +36,17 @@ class RegistrationPage(BasePage):
         self.driver.get(self.URL)
 
     def register(
-            self, first_name: str, last_name: str, street: str, city: str, state: str, zip: str, phone: str, ssn: str,
-            username: str, password: str
+        self,
+        first_name: str,
+        last_name: str,
+        street: str,
+        city: str,
+        state: str,
+        zip: str,
+        phone: str,
+        ssn: str,
+        username: str,
+        password: str,
     ):
         self.logger.info("Filling registration form")
         self.type(self.firstname_input, first_name)

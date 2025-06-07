@@ -12,7 +12,7 @@ def setup_logger(name: str) -> logging.Logger:
     os.makedirs(log_dir, exist_ok=True)
     file_name = os.path.join(log_dir, f"{datetime.now():%Y-%m-%d-%H-%M-%S}.log")
 
-    formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(name)s: %(message)s')
+    formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 
     file_handler = logging.FileHandler(file_name)
     file_handler.setFormatter(formatter)
