@@ -25,11 +25,6 @@ screenshots/
 .DS_Store
 Thumbs.db
 
-# Test data output
-*.csv
-*.json
-*.db
-
 # Pytest cache
 .pytest_cache/
 
