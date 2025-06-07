@@ -4,10 +4,10 @@ name: Run Python Tests
 on:  # 👈 This is the missing part!
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   test:
