@@ -31,5 +31,5 @@ def test_user_registration(setup_browser, user):
         )
 
     with allure.step("Verify registration success message"):
-        assert reg_page.is_text_present(reg_page.welcome_text_el, f"Welcome {user["username"]}"), f"Expected welcome text not found for user {user["username"]}"
+        assert reg_page.is_text_present(reg_page.welcome_text_el, f"Welcome {user['username']}"), f"Expected welcome text not found for user {user['username']}"
         assert reg_page.is_text_present(reg_page.acc_created_text_el, "You are now logged in."), "Account creation confirmation text missing"
