@@ -1,17 +1,29 @@
 # conftest.py
 import os
+import tempfile
 from datetime import datetime
 
 import allure
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 from utils.common_functions import read_csv_data
 
 
 @pytest.fixture(scope="function")
 def setup_browser():
-    driver = webdriver.Chrome()
+    chrome_options = Options()
+    # Run headless on CI for stability & speed (optional)
+    chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+
+    # Create a unique temp dir for user data to avoid conflicts
+    temp_user_data_dir = tempfile.mkdtemp()
+    chrome_options.add_argument(f"--user-data-dir={temp_user_data_dir}")
+
+    driver = webdriver.Chrome(options=chrome_options)
     driver.implicitly_wait(5)
     driver.maximize_window()
     yield driver
