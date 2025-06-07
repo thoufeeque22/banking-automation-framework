@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+*.env
+
+# Reports and screenshots
+reports/
+allure-report/
+allure-results/
+screenshots/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Test data output
+*.csv
+*.json
+*.db
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+*.tmp
